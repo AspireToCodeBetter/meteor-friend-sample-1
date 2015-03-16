@@ -12,6 +12,10 @@
           <li class="list-group-item">
             Email is: {{../emails.[0].address}}
           </li>
+          <li class="list-group-item">
+            <button type="submit" class="btn btn-success" id="addFriend" data-id={{../_id}}>Add friend</button>
+            <button type="submit" class="btn btn-danger" id="removeFriend" data-id={{../_id}}>Remove friend</button>
+          </li>
         {{/with}}
     </ul>
   </div>

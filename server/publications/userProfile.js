@@ -20,8 +20,6 @@ Meteor.publish("userProfile", function(userId) {
     return user;
   };
 
-
-
   var handle = Meteor.users.find(userId, {fields: fields}).observe({
     added: function (user) {
       self.added('users', user._id, transform(user));
