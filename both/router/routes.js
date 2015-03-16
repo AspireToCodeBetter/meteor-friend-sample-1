@@ -7,5 +7,13 @@ Router.route('/dashboard', {
 });
 
 Router.plugin('ensureSignedIn', {
-  only: ['dashboard']
+  only: ['dashboard', 'users']
+});
+
+Router.route('/users', {
+  name: 'users'
+});
+
+Router.route('/userProfile/:_id', {
+  name: 'userProfile'
 });

@@ -1,0 +1,18 @@
+<template name="userProfile">
+  <div class="template-user">
+    <div class="page-header">
+      <h1>Checking out the User Profile for {{this._id}}</h1>
+    </div>
+
+    <ul class="list-group">
+        {{#with profile}}
+          <li class="list-group-item">
+            {{ firstName }} &nbsp; {{ lastName }} &nbsp; <span class="label label-default">{{ ../_id }}</span>
+          </li>
+          <li class="list-group-item">
+            Email is: {{../emails.[0].address}}
+          </li>
+        {{/with}}
+    </ul>
+  </div>
+</template>

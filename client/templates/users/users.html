@@ -1,0 +1,22 @@
+<template name="users">
+  <div class="template-users">
+    <div class="page-header">
+      <h1>Users</h1>
+    </div>
+
+    <ul class="list-group">
+      {{#each users}}
+        {{#with profile}}
+          <li class="list-group-item">
+            <a href="{{pathFor 'userProfile' _id=../_id}}">
+              {{ firstName }} &nbsp; {{ lastName }}
+            </a>
+            &nbsp;&nbsp;
+            <span class="label label-default">{{ ../_id }}</span>
+          </li>
+        {{/with}}
+      {{/each}}
+    </ul>
+
+  </div>
+</template>
