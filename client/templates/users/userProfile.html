@@ -8,6 +8,7 @@
         {{#with profile}}
           <li class="list-group-item">
             {{ firstName }} &nbsp; {{ lastName }} &nbsp; <span class="label label-default">{{ ../_id }}</span>
+            <span class="label label-default pull-right">He is {{#if ../isFriend}} a friend {{else}} not a friend {{/if}}</span>
           </li>
           <li class="list-group-item">
             Email is: {{../emails.[0].address}}
